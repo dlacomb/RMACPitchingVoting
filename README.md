@@ -140,6 +140,8 @@ Information from 2008-2017 including 1,075 players, 29 features (3 categorical, 
 
 I performed Exploratory Data Analysis Visualizations to see visual comparisons of statistics between 1st Team, 2nd Team, and No winners.  Below is a Visualization Comparison for each set of comparison.
 
+![1 and 0](https://user-images.githubusercontent.com/36368488/38838404-2b6fee3a-4193-11e8-963f-6d6389f49be7.png)
+
 **```Balancing Data```**
 
 In order to perform supervised learning maching learning algorithms on this multiclassification problem I first needed to balance the dataset through the use of the SMOTE Algorithm.  I performed the SMOTE function to oversample the dataset so I can get a 1/3 representation of each target value.  One of the main goals was to keep the dataset close in size, therefore I oversampled all of the classes to get 350 cases of 1st Team winners and 369 cases of 2nd Team winners.  I exported the new dataset into a csv file where I manipulated the majority class and removed the weakest players to have 350 cases of no winners.  After creating a balanced dataset in Excel, I imported the Pitching Stats Balanced Data back into R.
