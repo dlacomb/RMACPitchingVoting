@@ -140,7 +140,11 @@ Information from 2008-2017 including 1,075 players, 29 features (3 categorical, 
 
 I performed Exploratory Data Analysis Visualizations to see visual comparisons of statistics between 1st Team, 2nd Team, and No winners.  Below is a Visualization Comparison for each set of comparison.
 
+![1 and 2](https://user-images.githubusercontent.com/36368488/38838445-528da4ee-4193-11e8-886c-8a13940ee0d7.png)
+
 ![1 and 0](https://user-images.githubusercontent.com/36368488/38838404-2b6fee3a-4193-11e8-963f-6d6389f49be7.png)
+
+![2 and 0](https://user-images.githubusercontent.com/36368488/38838436-4a8a7358-4193-11e8-9868-d26b912eebb1.png)
 
 **```Balancing Data```**
 
