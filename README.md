@@ -148,7 +148,7 @@ I performed Exploratory Data Analysis Visualizations to see visual comparisons o
 
 Next, I used the corrplot package to visually see correlations between variables in the Pitching Stats Full Dataset.
 
-
+![corplot](https://user-images.githubusercontent.com/36368488/38881150-a4480cb6-4224-11e8-9939-af29aa5175a8.png)
 
 **```Balancing Data```**
 
