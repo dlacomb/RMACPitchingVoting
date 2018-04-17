@@ -146,6 +146,10 @@ I performed Exploratory Data Analysis Visualizations to see visual comparisons o
 
 ![2 and 0](https://user-images.githubusercontent.com/36368488/38838436-4a8a7358-4193-11e8-9868-d26b912eebb1.png)
 
+Next, I used the corrplot package to visually see correlations between variables in the Pitching Stats Full Dataset.
+
+
+
 **```Balancing Data```**
 
 In order to perform supervised learning maching learning algorithms on this multiclassification problem I first needed to balance the dataset through the use of the SMOTE Algorithm.  I performed the SMOTE function to oversample the dataset so I can get a 1/3 representation of each target value.  One of the main goals was to keep the dataset close in size, therefore I oversampled all of the classes to get 350 cases of 1st Team winners and 369 cases of 2nd Team winners.  I exported the new dataset into a csv file where I manipulated the majority class and removed the weakest players to have 350 cases of no winners.  After creating a balanced dataset in Excel, I imported the Pitching Stats Balanced Data back into R.
