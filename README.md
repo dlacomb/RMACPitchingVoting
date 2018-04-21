@@ -142,9 +142,11 @@ I performed Exploratory Data Analysis Visualizations to see visual comparisons o
 
 ![all 3](https://user-images.githubusercontent.com/36368488/39085388-c1da1522-453e-11e8-8763-c5efb478c9fc.png)
 
-Next, I used the corrplot package to visually see correlations between variables in the Pitching Stats Full Dataset.
+Next, I used the corrplot package to visually see correlations between variables in the Pitching Stats Full Dataset The first plot shows correlations based on size and darkness of the circle, and the second plot shows the correlation value between each variable.
 
 ![corplot](https://user-images.githubusercontent.com/36368488/38881150-a4480cb6-4224-11e8-9939-af29aa5175a8.png)
+
+![cor number](https://user-images.githubusercontent.com/36368488/39085415-2ac9877a-453f-11e8-97bd-f62d368625e8.png)
 
 **```Balancing Data```**
 
