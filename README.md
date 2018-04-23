@@ -215,3 +215,5 @@ Information from 2008-2017 including 1,069 players, 29 features (3 categorical, 
 **Award:** 0 = No Winner, 1 = 1st Team, 2 = 2nd Team: Target Variable (Frequency: 0 = 350 losers, 1 = 350 winners 2 = 369 winners)
 
 **```Model Analysis```**
+
+![var importance](https://user-images.githubusercontent.com/36368488/39150099-780cb334-46fe-11e8-8cb2-250381286289.png)
