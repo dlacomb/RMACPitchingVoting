@@ -1,19 +1,19 @@
-##Data Partitioning into Training and Test Sets
+> ###Data Partitioning into Training and Test Sets
 > ps_sets <- psbd[,2:29]
 > ind <- sample(2, nrow(ps_sets), replace = TRUE, prob = c(0.8,0.2))
 > trainps <- ps_sets[ind == 1,]
 > testps <- ps_sets[ind == 2,]
-#RandomForest
+> #RandomForest
 > install.packages("randomForest")
 > library(randomForest)
 > fit <- randomForest(Award ~ ., data = trainps, method="class")
 > print(fit)
 > #Accuracy = 98%
-  > summary(fit)
+> summary(fit)
 > importance(fit)
 > #Variable Importance Order
-  > # 1.) Strikeouts 2.) Wins 3.) Earned Run Average 4.) At Bats 5.) Innings Pitched 6.) Batting Average Against 7.) Team 8.) Runs 9.) Hits 10.) Doubles 11.) Earned Runs 12.) Appearances 13.) Combined Shutouts 14.) Walks 15.) Conference Standing 16.) Games Started 17.) Saves 18.) Complete Games 19.) Hit Batters 20.) Losses 21.) Year 22.) Homeruns 23.) Wild Pitches 24.) Triples 25.) Balks 26.) Individual Shutouts 27.) Position
-  > varImpPlot(fit)
+> # 1.) Strikeouts 2.) Wins 3.) Earned Run Average 4.) At Bats 5.) Innings Pitched 6.) Batting Average Against 7.) Team 8.) Runs 9.) Hits 10.) Doubles 11.) Earned Runs 12.) Appearances 13.) Combined Shutouts 14.) Walks 15.) Conference Standing 16.) Games Started 17.) Saves 18.) Complete Games 19.) Hit Batters 20.) Losses 21.) Year 22.) Homeruns 23.) Wild Pitches 24.) Triples 25.) Balks 26.) Individual Shutouts 27.) Position
+> varImpPlot(fit)
 > library(caret)
 > Prediction <- predict(fit, testps, type = "class")
 > confusionMatrix(Prediction, testps$Award)
