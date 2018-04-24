@@ -142,11 +142,17 @@ I performed Exploratory Data Analysis Visualizations to see visual comparisons o
 
 ![all 3](https://user-images.githubusercontent.com/36368488/39085388-c1da1522-453e-11e8-8763-c5efb478c9fc.png)
 
+Performance metrics such as Conference Standing, era, hits, runs, earned runs, and walks on average are lower for 1st Team All Conference winners because a lower value is better.  From viewing the large difference in bar height from 2nd Team All Conference to No winners, one can assume that the conference winners drastically pitched more on average compared to the losers.
+
 Next, I used the corrplot package to visually see correlations between variables in the Pitching Stats Full Dataset The first plot shows correlations based on size and darkness of the circle, and the second plot shows the correlation value between each variable.
 
 ![corplot](https://user-images.githubusercontent.com/36368488/38881150-a4480cb6-4224-11e8-9939-af29aa5175a8.png)
 
+Visually, one can conclude there are correlations between games started, innings pitched, and hits compared with at bats faced.
+
 ![cor number](https://user-images.githubusercontent.com/36368488/39085415-2ac9877a-453f-11e8-97bd-f62d368625e8.png)
+
+Numerically, the two variables that show the highest correlation are runs and earned runs, and innings pitched and at bats, both with a 99% correlation.
 
 **```Balancing Data```**
 
