@@ -1,5 +1,5 @@
-> ###Exploratory Data Analysis
-  > install.packages("dplyr")
+> ### Exploratory Data Analysis
+> install.packages("dplyr")
 > library(dplyr)
 > first <- filter(psfd, psfd$Award == 1)
 > second <- filter(psfd, psfd$Award == 2)
@@ -13,13 +13,13 @@
 > compareAwards <- rbind(AveStats_FirstTeam, AveStats_SecondTeam, AveStats_NoTeam)
 > barplot(compareAwards, beside = TRUE, xlab = "Pitching Metric", ylab = "Performance Value", main = "Mean Pitcher Statistics Comparison between 1st, 2nd, and No Team", col = c("gold", "grey", "brown"), cex.names = .5)
 > legend("topright", c("1st Team","2nd Team", "No Team"), pch=15, col=c("gold","grey", "brown"), bty="n")
-### Correlation plot between numeric variables
+> ### Correlation plot between numeric variables
 > install.packages("corrplot")
 > library(corrplot)
 > psfd_cor <- cor(psfd[,4:29])
 > corrplot(psfd_cor, method = "circle")
 > corrplot(psfd_cor, method = "number")
-###Balance Dataset with SMOTE Algorithm
+> ### Balance Dataset with SMOTE Algorithm
 > psfd$`Player ` <- as.factor(psfd$`Player `)
 > psfd$Position <- as.factor(psfd$Position)
 > psfd$Team <- as.factor(psfd$Team)
