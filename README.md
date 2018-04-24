@@ -216,4 +216,25 @@ Information from 2008-2017 including 1,069 players, 29 features (3 categorical, 
 
 **```Model Analysis```**
 
+**Multiclassification Analysis**
+
+Random Forest: Accuracy = 98%
+
+               Variable Importance: 1.) Strikeouts 2.) Wins 3.) Earned Run Average 4.) At Bats 5.) Innings Pitched 6.) Batting Average Against 7.) Team 8.) Runs 9.) Hits 10.) Doubles 11.) Earned Runs 12.) Appearances 13.) Combined Shutouts 14.) Walks 15.) Conference Standing 16.) Games Started 17.) Saves 18.) Complete Games 19.) Hit Batters 20.) Losses 21.) Year 22.) Homeruns 23.) Wild Pitches 24.) Triples 25.) Balks 26.) Individual Shutouts 27.) Position
+
 ![var importance](https://user-images.githubusercontent.com/36368488/39150099-780cb334-46fe-11e8-8cb2-250381286289.png)
+
+**Binomial Classification Analysis**
+
+KNN 
+
+K = 5: Accuracy = 95%
+
+K = 6: Accuracy = 96%
+
+K = 7: Accuracy = 96%
+
+K = 8: Accuracy = 95%
+
+**```Conclusion/Interpretation of Results```**
+
