@@ -20,13 +20,13 @@
 > summary(ps)
 > ps <- as.data.frame(ps)
 > ###Fix NA values through knn Imputation
-  > install.packages("DMwR")
+> install.packages("DMwR")
 > library(DMwR)
 > ps_complete <- knnImputation(ps[,4:28], k = 5, meth = "weighAvg")
 > View(ps_complete)
 > 
-  > ###Import Pitching Stats full dataset
-  > library(readr)
+> ###Import Pitching Stats full dataset
+> library(readr)
 > Pitching_Stats_Full_Dataset <- read_csv("E:/Grad School/Practicum 2/Pitching Stats Full Dataset.csv", 
                                           +     col_types = cols(`2b ` = col_number(), 
                                                                  +         `3b ` = col_number(), Award = col_number(), 
@@ -44,4 +44,3 @@
                                                                  +         `wp ` = col_number()), locale = locale(encoding = "ASCII"))
 > View(Pitching_Stats_Full_Dataset)
 > psfd <- Pitching_Stats_Full_Dataset
-> 
