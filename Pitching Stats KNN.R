@@ -1,20 +1,22 @@
-> ####KNN
-  > library(class)
+> ###KNN
+> library(class)
 > library(gmodels)
 > knnps <- psbd[,2:29]
 > knnps$Position <- as.numeric(knnps$Position)
 > knnps$Team <- as.numeric(knnps$Team)
 > #Normalize Data
-  > normalize <- function(x) {return ((x - min(x)) / (max(x) - min(x)))}
-  > bps_n <- as.data.frame(lapply(knnps[1:27], normalize))
-  > #Training and Testing Sets
-    > ind <- sample(2, nrow(bps_n), replace = TRUE, prob = c(0.8,0.2))
-    > trainps <- bps_n[ind == 1,]
-    > testps <- bps_n[ind == 2,]
-    > trainpslabels <- knnps[ind == 1, 28]
-    > testpslabels <- knnps[ind == 2, 28]
-    > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 8)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+> normalize <- function(x) {return ((x - min(x)) / (max(x) - min(x)))}
+> bps_n <- as.data.frame(lapply(knnps[1:27], normalize))
+> #Training and Testing Sets
+> ind <- sample(2, nrow(bps_n), replace = TRUE, prob = c(0.8,0.2))
+> trainps <- bps_n[ind == 1,]
+> testps <- bps_n[ind == 2,]
+> trainpslabels <- knnps[ind == 1, 28]
+> testpslabels <- knnps[ind == 2, 28]
+
+> #K = 8
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 8)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -52,9 +54,9 @@
       -------------|-----------|-----------|-----------|-----------|
       > #Accuracy = 78%
       
-      
-      > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 5)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+> #K = 5
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 5)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -92,9 +94,9 @@
       -------------|-----------|-----------|-----------|-----------|
       > #Accuracy = 82%
       
-      
-      > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 3)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+> #K = 3  
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 3)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -132,9 +134,9 @@
       -------------|-----------|-----------|-----------|-----------|
       > #Accuracy = 87%
       
-      
-      > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 2)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+> #K = 2
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 2)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -172,26 +174,27 @@
       -------------|-----------|-----------|-----------|-----------|
       > #Accuracy = 90%
       
-      > #Binary Classification Model Analysis
-      > ####KNN
-      > library(class)
-    > library(gmodels)
-    > str(psbd)
-    > knnps <- psbd[,2:29]
-    > knnps$Position <- as.numeric(knnps$Position)
-    > knnps$Team <- as.numeric(knnps$Team)
-    > #Normalize Data
-      > normalize <- function(x) {return ((x - min(x)) / (max(x) - min(x)))}
-    > bps_n <- as.data.frame(lapply(knnps[1:27], normalize))
-    > 
-      > #Training and Testing Sets
-      > ind <- sample(2, nrow(bps_n), replace = TRUE, prob = c(0.8,0.2))
-    > trainps <- bps_n[ind == 1,]
-    > testps <- bps_n[ind == 2,]
-    > trainpslabels <- knnps[ind == 1, 28]
-    > testpslabels <- knnps[ind == 2, 28]
-    > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 8)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+> #Binary Classification Model Analysis
+> ###KNN
+> library(class)
+> library(gmodels)
+> str(psbd)
+> knnps <- psbd[,2:29]
+> knnps$Position <- as.numeric(knnps$Position)
+> knnps$Team <- as.numeric(knnps$Team)
+> #Normalize Data
+> normalize <- function(x) {return ((x - min(x)) / (max(x) - min(x)))}
+> bps_n <- as.data.frame(lapply(knnps[1:27], normalize))
+> #Training and Testing Sets
+> ind <- sample(2, nrow(bps_n), replace = TRUE, prob = c(0.8,0.2))
+> trainps <- bps_n[ind == 1,]
+> testps <- bps_n[ind == 2,]
+> trainpslabels <- knnps[ind == 1, 28]
+> testpslabels <- knnps[ind == 2, 28]
+
+> #K = 8
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 8)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -222,11 +225,11 @@
       Column Total |       104 |       116 |       220 | 
       |     0.473 |     0.527 |           | 
       -------------|-----------|-----------|-----------|
-      
-      
       > #Accuracy = 95%
-      > ps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 5)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+
+> #K = 5
+> ps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 5)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -257,11 +260,11 @@
       Column Total |       104 |       116 |       220 | 
       |     0.473 |     0.527 |           | 
       -------------|-----------|-----------|-----------|
-      
-      
       > #Accuracy = 95%
-      > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 7)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+
+> #K = 7
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 7)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -292,11 +295,11 @@
       Column Total |       104 |       116 |       220 | 
       |     0.473 |     0.527 |           | 
       -------------|-----------|-----------|-----------|
-      
-      
       > #Accuracy = 96%
-      > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 6)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+
+> #K = 6  
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 6)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -327,6 +330,4 @@
       Column Total |       103 |       117 |       220 | 
       |     0.468 |     0.532 |           | 
       -------------|-----------|-----------|-----------|
-      
-      
       > #Accuracy = 96%
