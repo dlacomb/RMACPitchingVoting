@@ -1,20 +1,22 @@
-> ####KNN
-  > library(class)
+> ###KNN
+> library(class)
 > library(gmodels)
 > knnps <- psbd[,2:29]
 > knnps$Position <- as.numeric(knnps$Position)
 > knnps$Team <- as.numeric(knnps$Team)
 > #Normalize Data
-  > normalize <- function(x) {return ((x - min(x)) / (max(x) - min(x)))}
-  > bps_n <- as.data.frame(lapply(knnps[1:27], normalize))
-  > #Training and Testing Sets
-    > ind <- sample(2, nrow(bps_n), replace = TRUE, prob = c(0.8,0.2))
-    > trainps <- bps_n[ind == 1,]
-    > testps <- bps_n[ind == 2,]
-    > trainpslabels <- knnps[ind == 1, 28]
-    > testpslabels <- knnps[ind == 2, 28]
-    > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 8)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+> normalize <- function(x) {return ((x - min(x)) / (max(x) - min(x)))}
+> bps_n <- as.data.frame(lapply(knnps[1:27], normalize))
+> #Training and Testing Sets
+> ind <- sample(2, nrow(bps_n), replace = TRUE, prob = c(0.8,0.2))
+> trainps <- bps_n[ind == 1,]
+> testps <- bps_n[ind == 2,]
+> trainpslabels <- knnps[ind == 1, 28]
+> testpslabels <- knnps[ind == 2, 28]
+
+> #K = 8
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 8)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -51,9 +53,9 @@
       |     0.328 |     0.205 |     0.467 |           | 
       -------------|-----------|-----------|-----------|-----------|
       
-      
-      > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 5)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+> #K = 5     
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 5)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -90,9 +92,9 @@
       |     0.323 |     0.215 |     0.462 |           | 
       -------------|-----------|-----------|-----------|-----------|
       
-      
-      > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 3)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+> #K = 3     
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 3)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -129,9 +131,9 @@
       |     0.354 |     0.262 |     0.385 |           | 
       -------------|-----------|-----------|-----------|-----------|
       
-      
-      > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 2)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
+> #K = 2
+> bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 2)
+> CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
     
     
     Cell Contents
@@ -169,40 +171,4 @@
       -------------|-----------|-----------|-----------|-----------|
       
       
-      > bps_pred <- knn(train = trainps[,-1], test = testps[,-1], cl = trainpslabels, k = 1)
-    > CrossTable(x = testpslabels, y = bps_pred, prop.chisq = FALSE)
-    
-    
-    Cell Contents
-    |-------------------------|
-      |                       N |
-      |           N / Row Total |
-      |           N / Col Total |
-      |         N / Table Total |
-      |-------------------------|
-      
-      
-      Total Observations in Table:  195 
-    
-    
-    | bps_pred 
-    testpslabels |         0 |         1 |         2 | Row Total | 
-      -------------|-----------|-----------|-----------|-----------|
-      0 |        70 |         0 |         1 |        71 | 
-      |     0.986 |     0.000 |     0.014 |     0.364 | 
-      |     0.986 |     0.000 |     0.015 |           | 
-      |     0.359 |     0.000 |     0.005 |           | 
-      -------------|-----------|-----------|-----------|-----------|
-      1 |         1 |        59 |         5 |        65 | 
-      |     0.015 |     0.908 |     0.077 |     0.333 | 
-      |     0.014 |     1.000 |     0.077 |           | 
-      |     0.005 |     0.303 |     0.026 |           | 
-      -------------|-----------|-----------|-----------|-----------|
-      2 |         0 |         0 |        59 |        59 | 
-      |     0.000 |     0.000 |     1.000 |     0.303 | 
-      |     0.000 |     0.000 |     0.908 |           | 
-      |     0.000 |     0.000 |     0.303 |           | 
-      -------------|-----------|-----------|-----------|-----------|
-      Column Total |        71 |        59 |        65 |       195 | 
-      |     0.364 |     0.303 |     0.333 |           | 
-      -------------|-----------|-----------|-----------|-----------|
+ 
