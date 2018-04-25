@@ -226,7 +226,7 @@ Information from 2008-2017 including 1,069 players, 29 features (3 categorical, 
 
 Random Forest: Accuracy = 98%
 
-               Variable Importance: 1.) Strikeouts 2.) Wins 3.) Earned Run Average 4.) At Bats 5.) Innings Pitched 6.) Batting Average Against 7.) Team 8.) Runs 9.) Hits 10.) Doubles 11.) Earned Runs 12.) Appearances 13.) Combined Shutouts 14.) Walks 15.) Conference Standing 16.) Games Started 17.) Saves 18.) Complete Games 19.) Hit Batters 20.) Losses 21.) Year 22.) Homeruns 23.) Wild Pitches 24.) Triples 25.) Balks 26.) Individual Shutouts 27.) Position
+Variable Importance: 1.) Strikeouts 2.) Wins 3.) Earned Run Average 4.) At Bats 5.) Innings Pitched 6.) Batting Average Against 7.) Team 8.) Runs 9.) Hits 10.) Doubles 11.) Earned Runs 12.) Appearances 13.) Combined Shutouts 14.) Walks 15.) Conference Standing 16.) Games Started 17.) Saves 18.) Complete Games 19.) Hit Batters 20.) Losses 21.) Year 22.) Homeruns 23.) Wild Pitches 24.) Triples 25.) Balks 26.) Individual Shutouts 27.) Position
 
 ![var importance](https://user-images.githubusercontent.com/36368488/39150099-780cb334-46fe-11e8-8cb2-250381286289.png)
 
@@ -243,4 +243,6 @@ K = 7: Accuracy = 96%
 K = 8: Accuracy = 95%
 
 **```Conclusion/Interpretation of Results```**
+
+The original dataset of pitching statistics contained 975 losers, 50 2nd Team All Conference, and 50 1st Team All Conference.  This means that over a 10 year period 91% of the players do not win an award.  Therefore, with this information we must only take the models that perform an accuracy value over 91%.  For the multiclassification problem I performed a Random Forest, KNN, and SVM test on the balanced dataset.  Only the Random Forest model performed an accuracy rating over 91%.  The Random Forest model performed at a 98% accuracy rating for both the train and test set.  Also, it computed the variable importance of dictating who won an award or not.  The top 5 variables which dictate award winners are strikeouts, wins, earned run average, at bats, and innings pitched.  With this data I have done further exploratory data analysis to find players who were the top candidates each year based on these categories.  Below are the candidates.
 
