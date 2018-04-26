@@ -150,7 +150,7 @@ Next, I used the corrplot package to visually see correlations between variables
 
 Visually, one can conclude there are correlations between games started, innings pitched, and hits compared with at bats faced.
 
-![cor number](https://user-images.githubusercontent.com/36368488/39085415-2ac9877a-453f-11e8-97bd-f62d368625e8.png)
+![cor number](https://user-images.githubusercontent.com/36368488/39317813-c3acb432-4939-11e8-8aa2-a1028765f927.png)
 
 Numerically, the two variables that show the highest correlation are runs and earned runs, and innings pitched and at bats, both with a 99% correlation.
 
