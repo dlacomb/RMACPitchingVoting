@@ -250,7 +250,7 @@ The original dataset of pitching statistics contained 975 losers, 50 2nd Team Al
 
 
 
-Resources
+<p align="center"> Resources
 
 SMOTE - https://www.r-bloggers.com/handling-class-imbalance-with-r-and-caret-an-introduction/ - https://www.rdocumentation.org/packages/DMwR/versions/0.4.1/topics/SMOTE - https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/
 
