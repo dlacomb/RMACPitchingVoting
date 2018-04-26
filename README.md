@@ -248,23 +248,5 @@ The original dataset of pitching statistics contained 975 losers, 50 2nd Team Al
 
 <p align="center"> Comparison of Award Winners vs Statistical Winners for Each Year based on so, w, era, ab, and ip
 
-2008: Kaiser CCU
 
-2009: None
-
-2010: Evins NMHU
-
-2011: Perry MSUD, Metter UNK
-
-2012: Harms RU, McElreath RU
-
-2013: Danner CMU, Davis CMU, Snell CMU, Struble CSUP
-
-2014: Davis CMU
-
-2015: Soto CSUP
-
-2016: Gotsis RU, Quackenbush RU, Allen CMU
-
-2017: Ramirez CMU, Gotsis RU
 
