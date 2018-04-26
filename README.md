@@ -4,7 +4,7 @@ Analysis and Evaluation of Rocky Mountain Athletic Conference (RMAC) Baseball Co
 
 The purpose of this topic study is to discover if there are correlations between voting on all-conference pitchers with statistical metrics or is there enough evidence to prove that players are voted on due to a subjective judgment based on coaches who have evaluated a player’s statistical performance and immeasurable tangibles, such as character, attitude, effort, and/or competitiveness.  Within the analysis, all-conference winners will be decided based on statistical performance and will be analyzed against the winner of that year.
 
-**```Data Collection```**
+## **Data Collection**
 
 <p align="center"> Pitching Stats Data
 
@@ -70,7 +70,7 @@ Information from 2008-2017 including 1,075 players, 30 features (3 categorical, 
 
 **2nd Team:** Yes or No, Target Variable, Player wins 2nd Team All Conference or not (49 winners, *Note: Some years there are ties) 
 
-**```Data Cleaning```**
+## **Data Cleaning**
 
 Majority of the data organizing was performed in Excel.  Data handling was dealt with in R.  I needed to handle missing data in order to have a full dataset.  The Pitching Stats Dataset had over 1,000 missing data entries which was fixed through knn imputation.  After knn imputation was performed, I transfered the new dataset into a csv that could be better managed in Excel.  After some data cleaning in Excel and condensing the target variables into one multiclassification problem, the dataset Pitching Stats Full Dataset was imported back into R.  
 
@@ -136,7 +136,7 @@ Information from 2008-2017 including 1,075 players, 29 features (3 categorical, 
 
 **Award:** 0 = No Winner, 1 = 1st Team, 2 = 2nd Team: Target Variable (Frequency: 0 = 976 losers, 1 = 51 winners 2 = 49 winners, *Note: Some years there are ties)
 
-**```Exploratory Data Analysis (EDA)```**
+## **Exploratory Data Analysis (EDA)**
 
 I performed Exploratory Data Analysis Visualizations to see visual comparisons of statistics between 1st Team, 2nd Team, and No winners.  Below is a Visualization Comparison for each team.
 
@@ -154,7 +154,7 @@ Visually, one can conclude there are correlations between games started, innings
 
 Numerically, the two variables that show the highest correlation are runs and earned runs, and innings pitched and at bats, both with a 99% correlation.
 
-**```Balancing Data```**
+## **Balancing Data**
 
 In order to perform supervised learning maching learning algorithms on this multiclassification problem I first needed to balance the dataset through the use of the SMOTE Algorithm.  I performed the SMOTE function to oversample the dataset so I can get a 1/3 representation of each target value.  One of the main goals was to keep the dataset close in size, therefore I oversampled all of the classes to get 350 cases of 1st Team winners and 369 cases of 2nd Team winners.  I exported the new dataset into a csv file where I manipulated the majority class and removed the weakest players to have 350 cases of no winners.  After creating a balanced dataset in Excel, I imported the Pitching Stats Balanced Data back into R.
 
@@ -220,9 +220,9 @@ Information from 2008-2017 including 1,069 players, 29 features (3 categorical, 
 
 **Award:** 0 = No Winner, 1 = 1st Team, 2 = 2nd Team: Target Variable (Frequency: 0 = 350 losers, 1 = 350 winners 2 = 369 winners)
 
-**```Model Analysis```**
+## **Model Analysis**
 
-**Multiclassification Analysis**
+<p align="center"> Multiclassification Analysis
 
 Random Forest: Accuracy = 98%
 
@@ -230,7 +230,7 @@ Variable Importance: 1.) Strikeouts 2.) Wins 3.) Earned Run Average 4.) At Bats 
 
 ![var importance](https://user-images.githubusercontent.com/36368488/39150099-780cb334-46fe-11e8-8cb2-250381286289.png)
 
-**Binomial Classification Analysis**
+<p align="center"> Binomial Classification Analysis
 
 KNN 
 
@@ -242,11 +242,11 @@ K = 7: Accuracy = 96%
 
 K = 8: Accuracy = 95%
 
-**```Conclusion/Interpretation of Results```**
+## **Conclusion/Interpretation of Results**
 
 The original dataset of pitching statistics contained 975 losers, 50 2nd Team All Conference, and 50 1st Team All Conference.  This means that over a 10 year period 91% of the players do not win an award.  Therefore, with this information we must only take the models that perform an accuracy value over 91%.  For the multiclassification problem I performed a Random Forest, KNN, and SVM test on the balanced dataset.  Only the Random Forest model performed an accuracy rating over 91%.  The Random Forest model performed at a 98% accuracy rating for both the train and test set.  Also, it computed the variable importance of dictating who won an award or not.  The top 5 variables which dictate award winners are strikeouts, wins, earned run average, at bats, and innings pitched.  With this data I have done further exploratory data analysis to find players who were the top candidates each year based on these categories.  Below are the candidates.
 
-1st Team All Conference Candidates who did not win 1st Team All Conference
+<p align="center"> 1st Team All Conference Candidates who did not win 1st Team All Conference
 
 2008: Kaiser CCU
 
