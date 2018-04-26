@@ -67,7 +67,7 @@
 > library(corrplot)
 > psfd_cor <- cor(psfd[,4:29])
 > corrplot(psfd_cor, method = "circle")
-> corrplot(psfd_cor, method = "number")
+> corrplot(psfd_cor, method = "number", number.cex=0.5)
 
 > ###Balance Dataset with SMOTE Algorithm
 > psfd$`Player ` <- as.factor(psfd$`Player `)
