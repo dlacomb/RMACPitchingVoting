@@ -246,3 +246,47 @@ K = 8: Accuracy = 95%
 
 The original dataset of pitching statistics contained 975 losers, 50 2nd Team All Conference, and 50 1st Team All Conference.  This means that over a 10 year period 91% of the players do not win an award.  Therefore, with this information we must only take the models that perform an accuracy value over 91%.  For the multiclassification problem I performed a Random Forest, KNN, and SVM test on the balanced dataset.  Only the Random Forest model performed an accuracy rating over 91%.  The Random Forest model performed at a 98% accuracy rating for both the train and test set.  Also, it computed the variable importance of dictating who won an award or not.  The top 5 variables which dictate award winners are strikeouts, wins, earned run average, at bats, and innings pitched.  With this data I have done further exploratory data analysis to find players who were the top candidates each year based on these categories.  Below are the candidates.
 
+1st Team All Conference Candidates who did not win 1st Team All Conference
+
+2008: Kaiser CCU
+
+2009: None
+
+2010: Evins NMHU
+
+2011: Perry MSUD, Metter UNK
+
+2012: Harms RU, McElreath RU
+
+2013: Danner CMU, Davis CMU, Snell CMU, Struble CSUP
+
+2014: Davis CMU
+
+2015: Soto CSUP
+
+2016: Gotsis RU, Quackenbush RU, Allen CMU
+
+2017: Ramirez CMU, Gotsis RU
+
+2nd Team All Conference Candidates who did not win 2nd Team All Conference
+
+2008: Kaiser CCU
+
+2009: None
+
+2010: Evins NMHU
+
+2011: Perry MSUD, Metter UNK
+
+2012: Harms RU, McElreath RU
+
+2013: Danner CMU, Davis CMU, Snell CMU, Struble CSUP
+
+2014: Davis CMU
+
+2015: Soto CSUP
+
+2016: Gotsis RU, Quackenbush RU, Allen CMU
+
+2017: Ramirez CMU, Gotsis RU
+
