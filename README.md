@@ -250,3 +250,14 @@ The original dataset of pitching statistics contained 975 losers, 50 2nd Team Al
 
 
 
+Resources
+
+SMOTE - https://www.r-bloggers.com/handling-class-imbalance-with-r-and-caret-an-introduction/ - https://www.rdocumentation.org/packages/DMwR/versions/0.4.1/topics/SMOTE - https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/
+
+Random Forest - https://www.r-bloggers.com/random-forests-in-r/
+
+SVM - https://www.rdocumentation.org/packages/e1071/versions/1.6-8/topics/svm
+
+KNN - https://www.analyticsvidhya.com/blog/2015/08/learning-concept-knn-algorithms-programming/
+
+Corrplot - https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html
