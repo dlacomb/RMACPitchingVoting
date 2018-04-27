@@ -59,7 +59,7 @@
 > AveStats_SecondTeam <- as.matrix(AveStats_SecondTeam[,2:25])
 > AveStats_NoTeam <- as.matrix(AveStats_NoTeam[,2:25])
 > compareAwards <- rbind(AveStats_FirstTeam, AveStats_SecondTeam, AveStats_NoTeam)
-> barplot(compareAwards, beside = TRUE, xlab = "Pitching Metric", ylab = "Performance Value", main = "Mean Pitcher Statistics Comparison between 1st, 2nd, and No Team", col = c("gold", "grey", "brown"), cex.names = .5)
+> barplot(compareAwards, beside = TRUE, xlab = "Pitching Metric", ylab = "Performance Value", main = "Mean Pitcher Statistics Comparison between 1st, 2nd, and No Team", col = c("gold", "grey", "brown"), cex.names = .8, las = 3)
 > legend("topright", c("1st Team","2nd Team", "No Team"), pch=15, col=c("gold","grey", "brown"), bty="n")
 
 > ###Correlation plot between numeric variables
