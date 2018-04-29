@@ -244,10 +244,12 @@ K = 8: Accuracy = 95%
 
 ## **Conclusion/Interpretation of Results**
 
-The original dataset of pitching statistics contained 975 losers, 50 2nd Team All Conference, and 50 1st Team All Conference.  This means that over a 10 year period 91% of the players do not win an award.  Therefore, with this information we must only take the models that perform an accuracy value over 91%.  For the multiclassification problem I performed a Random Forest, KNN, and SVM test on the balanced dataset.  Only the Random Forest model performed an accuracy rating over 91%.  The Random Forest model performed at a 98% accuracy rating for both the train and test set.  Also, it computed the variable importance of dictating who won an award or not.  The top 5 variables which dictate award winners are strikeouts, wins, earned run average, at bats, and innings pitched.  With this data I have done further exploratory data analysis to find players who were the top candidates each year based on these categories.  Below are the candidates.
+The original dataset of pitching statistics contained 975 losers, 50 2nd Team All Conference, and 50 1st Team All Conference.  This means that over a 10 year period 91% of the players do not win an award.  Therefore, with this information we must only take the models that perform an accuracy value over 91%.  For the multiclassification problem I performed a Random Forest, KNN, and SVM test on the balanced dataset.  Only the Random Forest model performed an accuracy rating over 91%.  Therefore, I then changed the problem to a binomial classification problem where the pitcher either won an award or not.  I tested both KNN and SVM to see if I would get an accuracy rating of 91%.  KNN succeeded and SVM did not.  Results and code are both available to access.
 
-<p align="center"> Comparison of Award Winners vs Statistical Winners for Each Year based on so, w, era, ab, and ip
+The Random Forest model performed at a 98% accuracy rating for both the train and test set.  Also, it computed the variable importance of dictating who won an award or not.  The top 5 variables which dictate award winners are strikeouts, wins, earned run average, at bats, and innings pitched.  With this data I have done further exploratory data analysis to find players who were the top candidates each year based on these categories.  Below are the candidates.
 
+<p align="center"> Comparison of Award Winners vs Statistical Winners for Each Year 
+  
 ![2008 and 2009](https://user-images.githubusercontent.com/36368488/39411897-d87f9d0a-4bcf-11e8-89b3-f16ce12972d6.png)
 
 ![2010 and 2011](https://user-images.githubusercontent.com/36368488/39411900-de71d124-4bcf-11e8-8065-e5dcdb28392b.png)
