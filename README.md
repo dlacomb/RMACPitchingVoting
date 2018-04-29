@@ -248,7 +248,15 @@ The original dataset of pitching statistics contained 975 losers, 50 2nd Team Al
 
 <p align="center"> Comparison of Award Winners vs Statistical Winners for Each Year based on so, w, era, ab, and ip
 
+![2008 and 2009](https://user-images.githubusercontent.com/36368488/39411897-d87f9d0a-4bcf-11e8-89b3-f16ce12972d6.png)
 
+![2010 and 2011](https://user-images.githubusercontent.com/36368488/39411900-de71d124-4bcf-11e8-8065-e5dcdb28392b.png)
+
+![2012 and 2013](https://user-images.githubusercontent.com/36368488/39411901-e17fd096-4bcf-11e8-939a-de3f4f32083f.png)
+
+![2014 and 2015](https://user-images.githubusercontent.com/36368488/39411903-e4475006-4bcf-11e8-866f-8412b648afe8.png)
+
+![2016 and 2017](https://user-images.githubusercontent.com/36368488/39411904-e7044254-4bcf-11e8-8674-3de32c7f6e12.png)
 
 <p align="center"> Resources
 
