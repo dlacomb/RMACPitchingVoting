@@ -140,7 +140,7 @@ Information from 2008-2017 including 1,075 players, 29 features (3 categorical, 
 
 I performed Exploratory Data Analysis Visualizations to see visual comparisons of statistics between 1st Team, 2nd Team, and No winners.  Below is a Visualization Comparison for each team.
 
-![all 3](https://user-images.githubusercontent.com/36368488/39374953-dc11bc86-4a09-11e8-98d4-45158972c142.png)
+![all 3](https://user-images.githubusercontent.com/36368488/39554097-21a82bae-4e2e-11e8-90e6-55028e8df4ec.png)
 
 Performance metrics such as Conference Standing, era, hits, runs, earned runs, and walks on average are lower for 1st Team All Conference winners because a lower value is better.  From viewing the large difference in bar height from 2nd Team All Conference to No winners, one can assume that the conference winners drastically pitched more on average compared to the losers.
 
